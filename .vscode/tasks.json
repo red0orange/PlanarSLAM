@@ -1,0 +1,35 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "build",
+            "command": "./build.sh",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}",
+                "env": {
+                    "CMAKE_PREFIX_PATH": "/usr/local",
+                }
+            },
+        },
+        {
+            "type": "shell",
+            "label": "make main",
+            "command": "make -j2",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/build",
+                "env": {
+                    "CMAKE_PREFIX_PATH": "/usr/local",
+                }
+            },
+        }
+    ],
+    "version": "2.0.0"
+}

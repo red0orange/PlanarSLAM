@@ -1,0 +1,7 @@
+build
+mesh/*
+lib
+Thirdparty/DBoW2/build
+Thirdparty/g2o/build
+*.ply
+Vocabulary/ORBvoc.txt
