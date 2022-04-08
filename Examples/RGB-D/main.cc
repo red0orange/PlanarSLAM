@@ -43,8 +43,9 @@ int main(int argc, char **argv)
 
     // Create SLAM system. It initializes all system threads and gets ready to process frames.
     // Planar_SLAM::Config::SetParameterFile(argv[2]);
-    Planar_SLAM::config = cv::FileStorage(argv[2], cv::FileStorage::READ);
     Planar_SLAM::System SLAM(argv[1], argv[2], Planar_SLAM::System::RGBD, true);
+    Planar_SLAM::config = cv::FileStorage(argv[2], cv::FileStorage::READ);
+    cout << double(Planar_SLAM::config["Plane.DistanceThreshold"]) << endl;
 
     // Vector for tracking time statistics
     vector<float> vTimesTrack;
@@ -66,7 +67,6 @@ int main(int argc, char **argv)
                  << string(argv[3]) << "/" << vstrImageFilenamesRGB[ni] << endl;
             return 1;
         }
-        cout<<"Test 1"<<endl;
 
 #ifdef COMPILEDWITHC11
         std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
@@ -77,7 +77,6 @@ int main(int argc, char **argv)
         // Pass the image to the SLAM system
         SLAM.TrackRGBD(imRGB,imD,tframe);
 
-        cout<<"Test 2"<<endl;
 #ifdef COMPILEDWITHC11
         std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
 #else
