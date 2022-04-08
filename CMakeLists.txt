@@ -39,11 +39,13 @@ endif ()
 
 message(OPENCV_VERSION)
 
-find_package(Eigen3 3.1.0 REQUIRED)
+list(APPEND CMAKE_INCLUDE_PATH "/usr/local/include")
+find_package (Eigen3 3.3 REQUIRED NO_MODULE)
 find_package(Pangolin REQUIRED)
-find_package(PCL 1.7 REQUIRED)
+find_package(PCL 1.10 REQUIRED)
 
 include_directories(
+        /usr/local/cuda/include
         ${PROJECT_SOURCE_DIR}
         ${PROJECT_SOURCE_DIR}/include
         ${PROJECT_SOURCE_DIR}/g2oAddition

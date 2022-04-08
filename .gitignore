@@ -1,5 +1,6 @@
 *.ply
 Thirdparty/DBoW2/build
+Thirdparty/g2o/build
 Vocabulary
 build/
 lib/
