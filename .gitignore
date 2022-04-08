@@ -1,0 +1,6 @@
+*.ply
+Thirdparty/DBoW2/build
+Vocabulary
+build/
+lib/
+mesh/
