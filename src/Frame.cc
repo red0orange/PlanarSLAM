@@ -753,7 +753,7 @@ namespace Planar_SLAM {
     }
 
     bool Frame::MaxPointDistanceFromPlane(cv::Mat &plane, PointCloud::Ptr pointCloud) {
-        auto disTh = Config::Get<double>("Plane.DistanceThreshold");
+        auto disTh = double(config["Plane.DistanceThreshold"]);
         bool erased = false;
 //        double max = -1;
         double threshold = 0.04;

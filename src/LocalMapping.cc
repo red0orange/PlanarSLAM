@@ -231,8 +231,8 @@ namespace Planar_SLAM {
     }
 
     void LocalMapping::MapPlaneCulling() {
-        auto dTh = Config::Get<double>("Plane.AssociationDisRef");
-        auto aTh = Config::Get<double>("Plane.AssociationAngRef");
+        auto dTh = double(config["Plane.AssociationDisRef"]);
+        auto aTh = double(config["Plane.AssociationAngRef"]);
 
         vector<MapPlane *> vpMapPlanes = mpMap->GetAllMapPlanes();
 

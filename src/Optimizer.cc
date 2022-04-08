@@ -279,18 +279,18 @@ namespace Planar_SLAM {
             }
         }
 
-        double angleInfo = Config::Get<double>("Plane.AngleInfo");
+        double angleInfo = double(config["Plane.AngleInfo"]);
         angleInfo = 3282.8 / (angleInfo * angleInfo);
-        double disInfo = Config::Get<double>("Plane.DistanceInfo");
+        double disInfo = double(config["Plane.DistanceInfo"]);
         disInfo = disInfo * disInfo;
-        double parInfo = Config::Get<double>("Plane.ParallelInfo");
+        double parInfo = double(config["Plane.ParallelInfo"]);
         parInfo = 3282.8 / (parInfo * parInfo);
-        double verInfo = Config::Get<double>("Plane.VerticalInfo");
+        double verInfo = double(config["Plane.VerticalInfo"]);
         verInfo = 3282.8 / (verInfo * verInfo);
-        double planeChi = Config::Get<double>("Plane.Chi");
+        double planeChi = double(config["Plane.Chi"]);
         const float deltaPlane = sqrt(planeChi);
 
-        double VPplaneChi = Config::Get<double>("Plane.VPChi");
+        double VPplaneChi = double(config["Plane.VPChi"]);
         const float VPdeltaPlane = sqrt(VPplaneChi);
 
         // Set MapPlane vertices
@@ -768,18 +768,18 @@ namespace Planar_SLAM {
         vpEdgesVerPlane.reserve(M);
         vnIndexEdgeVerPlane.reserve(M);
 
-        double angleInfo = Config::Get<double>("Plane.AngleInfo");
+        double angleInfo = double(config["Plane.AngleInfo"]);
         angleInfo = 3282.8 / (angleInfo * angleInfo);
-        double disInfo = Config::Get<double>("Plane.DistanceInfo");
+        double disInfo = double(config["Plane.DistanceInfo"]);
         disInfo = disInfo * disInfo;
-        double parInfo = Config::Get<double>("Plane.ParallelInfo");
+        double parInfo = double(config["Plane.ParallelInfo"]);
         parInfo = 3282.8 / (parInfo * parInfo);
-        double verInfo = Config::Get<double>("Plane.VerticalInfo");
+        double verInfo = double(config["Plane.VerticalInfo"]);
         verInfo = 3282.8 / (verInfo * verInfo);
-        double planeChi = Config::Get<double>("Plane.Chi");
+        double planeChi = double(config["Plane.Chi"]);
         const float deltaPlane = sqrt(planeChi);
 
-        double VPplaneChi = Config::Get<double>("Plane.VPChi");
+        double VPplaneChi = double(config["Plane.VPChi"]);
         const float VPdeltaPlane = sqrt(VPplaneChi);
 
         {
@@ -1416,18 +1416,18 @@ namespace Planar_SLAM {
         vpEdgesVerPlane.reserve(M);
         vnIndexEdgeVerPlane.reserve(M);
 
-        double angleInfo = Config::Get<double>("Plane.AngleInfo");
+        double angleInfo = double(config["Plane.AngleInfo"]);
         angleInfo = 3282.8 / (angleInfo * angleInfo);
-        double disInfo = Config::Get<double>("Plane.DistanceInfo");
+        double disInfo = double(config["Plane.DistanceInfo"]);
         disInfo = disInfo * disInfo;
-        double parInfo = Config::Get<double>("Plane.ParallelInfo");
+        double parInfo = double(config["Plane.ParallelInfo"]);
         parInfo = 3282.8 / (parInfo * parInfo);
-        double verInfo = Config::Get<double>("Plane.VerticalInfo");
+        double verInfo = double(config["Plane.VerticalInfo"]);
         verInfo = 3282.8 / (verInfo * verInfo);
-        double planeChi = Config::Get<double>("Plane.Chi");
+        double planeChi = double(config["Plane.Chi"]);
         const float deltaPlane = sqrt(planeChi);
 
-        double VPplaneChi = Config::Get<double>("Plane.VPChi");
+        double VPplaneChi = double(config["Plane.VPChi"]);
         const float VPdeltaPlane = sqrt(VPplaneChi);
 
         {
@@ -2210,18 +2210,18 @@ namespace Planar_SLAM {
             }
         }
 
-        double angleInfo = Config::Get<double>("Plane.AngleInfo");
+        double angleInfo = double(config["Plane.AngleInfo"]);
         angleInfo = 3282.8 / (angleInfo * angleInfo);
-        double disInfo = Config::Get<double>("Plane.DistanceInfo");
+        double disInfo = double(config["Plane.DistanceInfo"]);
         disInfo = disInfo * disInfo;
-        double parInfo = Config::Get<double>("Plane.ParallelInfo");
+        double parInfo = double(config["Plane.ParallelInfo"]);
         parInfo = 3282.8 / (parInfo * parInfo);
-        double verInfo = Config::Get<double>("Plane.VerticalInfo");
+        double verInfo = double(config["Plane.VerticalInfo"]);
         verInfo = 3282.8 / (verInfo * verInfo);
-        double planeChi = Config::Get<double>("Plane.Chi");
+        double planeChi = double(config["Plane.Chi"]);
         const float deltaPlane = sqrt(planeChi);
 
-        double VPplaneChi = Config::Get<double>("Plane.VPChi");
+        double VPplaneChi = double(config["Plane.VPChi"]);
         const float VPdeltaPlane = sqrt(VPplaneChi);
 
         const int nPlaneExpectedSize = (lLocalKeyFrames.size() + lFixedCameras.size()) * lLocalMapPlanes.size();
@@ -3222,18 +3222,18 @@ namespace Planar_SLAM {
         vpEdgesVerPlane.reserve(M);
         vnIndexEdgeVerPlane.reserve(M);
 
-        double angleInfo = Config::Get<double>("Plane.AngleInfo");
+        double angleInfo = double(config["Plane.AngleInfo"]);
         angleInfo = 3282.8 / (angleInfo * angleInfo);
-        double disInfo = Config::Get<double>("Plane.DistanceInfo");
+        double disInfo = double(config["Plane.DistanceInfo"]);
         disInfo = disInfo * disInfo;
-        double parInfo = Config::Get<double>("Plane.ParallelInfo");
+        double parInfo = double(config["Plane.ParallelInfo"]);
         parInfo = 3282.8 / (parInfo * parInfo);
-        double verInfo = Config::Get<double>("Plane.VerticalInfo");
+        double verInfo = double(config["Plane.VerticalInfo"]);
         verInfo = 3282.8 / (verInfo * verInfo);
-        double planeChi = Config::Get<double>("Plane.Chi");
+        double planeChi = double(config["Plane.Chi"]);
         const float deltaPlane = sqrt(planeChi);
 
-        double VPplaneChi = Config::Get<double>("Plane.VPChi");
+        double VPplaneChi = double(config["Plane.VPChi"]);
         const float VPdeltaPlane = sqrt(VPplaneChi);
 
         {

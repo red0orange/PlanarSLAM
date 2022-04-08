@@ -42,8 +42,9 @@ int main(int argc, char **argv)
     }
 
     // Create SLAM system. It initializes all system threads and gets ready to process frames.
+    // Planar_SLAM::Config::SetParameterFile(argv[2]);
+    Planar_SLAM::config = cv::FileStorage(argv[2], cv::FileStorage::READ);
     Planar_SLAM::System SLAM(argv[1], argv[2], Planar_SLAM::System::RGBD, true);
-    Planar_SLAM::Config::SetParameterFile(argv[2]);
 
     // Vector for tracking time statistics
     vector<float> vTimesTrack;
